@@ -4,7 +4,7 @@
 	DATA
 ***********************/
 
-const UNIT_MAX_5 = 1422072;
+const UNIT_MAX_5 = 1137652;
 const UNIT_MAX_6 = 1993672;
 const UNIT_MAX_7 = 46646922;
 
