@@ -90,12 +90,12 @@ const UNIT_MAX = UNIT_MAX_7;
 	returns the amount of experience of the target after fusing
 */
 
-function fuse(source, target, target_max, great_success, amazing_success){
+function fuse(source, target, target_max, great_plus_amazing_success, amazing_success){
 	let success = Math.random();
 	if (success < amazing_success){
 		target += (source*2);
 	}
-	else if (success < great_success){
+	else if (success < great_plus_amazing_success){
 		target += (source*1.5);
 	}
 	else{
@@ -272,14 +272,14 @@ if(FUSING_EVENT){
 	var limit_king_mini = KING_MINI_BEST_LIMIT_EVENT;
 	var limit_gigantuar = GIGANTUAR_BEST_LIMIT_EVENT;
 	var limit_cactuar = METAL_CACTUAR_BEST_LIMIT_EVENT;
-	var fuse_great = GREAT_SUCCESS_EVENT;
+	var fuse_great = GREAT_SUCCESS_EVENT + AMAZING_SUCCESS_EVENT;
 	var fuse_amazing = AMAZING_SUCCESS_EVENT;
 }
 else{
 	var limit_king_mini = KING_MINI_BEST_LIMIT;
 	var limit_gigantuar = GIGANTUAR_BEST_LIMIT;
 	var limit_cactuar = METAL_CACTUAR_BEST_LIMIT;
-	var fuse_great = GREAT_SUCCESS;
+	var fuse_great = GREAT_SUCCESS + AMAZING_SUCCESS;
 	var fuse_amazing = AMAZING_SUCCESS;
 }
 
