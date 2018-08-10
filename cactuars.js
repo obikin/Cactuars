@@ -238,6 +238,7 @@ function maxUnit(cactuar_types, unit_start_xp, unit_max_xp, great_success, amazi
 
 		while(unit.xp < unit.max){
 			let cactuar = cactuar_types[0].xp;
+			cactuars[0]+=1;
 			
 			// ---------------------------------------
 			// to start with a fusion of 10 King Mini
