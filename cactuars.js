@@ -238,9 +238,15 @@ function maxUnit(cactuar_types, unit_start_xp, unit_max_xp, great_success, amazi
 
 		while(unit.xp < unit.max){
 			let cactuar = cactuar_types[0].xp;
+			
+			// ---------------------------------------
+			// to start with a fusion of 10 King Mini
+//				cactuar = cactuar_start_xp = fuse(KING_MINI*10, KING_MINI, KING_MINI_MAX, great_success, amazing_success);
+//				cactuars[0] += 10;
+			// ---------------------------------------
 
 			for (var i = 0; i < cactuar_types.length; i++) {
-				let limit = (cactuar_types[i].limit < unit.max)? cactuar_types[i].limit : unit.max;
+				let limit = ((unit.xp+cactuar_types[i].limit) < unit.max)? cactuar_types[i].limit : (unit.max - unit.xp);
 
 				while(cactuar < limit) {
 					// fusing the right way :
